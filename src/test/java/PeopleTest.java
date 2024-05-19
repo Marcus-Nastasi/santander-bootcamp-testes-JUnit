@@ -17,6 +17,12 @@ public class PeopleTest {
     }
 
     @Test
+    void returnIfIsMinor() {
+        People people = new People("Leo", "19/05/2010");
+        Assertions.assertFalse(people.isMajor());
+    }
+
+    @Test
     void equalsStringsOfBirth() {
         People people = new People("Jessica", "19/05/2000");
         Assertions.assertEquals("19/05/2000", people.getBirth());
