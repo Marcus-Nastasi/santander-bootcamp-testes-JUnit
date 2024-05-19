@@ -1,17 +1,18 @@
 package com.santander.testes;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class People {
 
     private String name;
-    private int age;
+    private Date birth;
+    private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    public People(String name, int age) {
+    public People(String name, String birth) throws ParseException {
         this.name = name;
-        this.age = age;
-    }
-
-    public boolean isMajor() {
-        return this.age >= 18;
+        this.birth = sdf.parse(birth);
     }
 
     public String getName() {
@@ -19,7 +20,10 @@ public class People {
     }
 
     public int getAge() {
-        return age;
+        long now = new Date().getTime();
+        long brt = this.birth.getTime();
+        long age = now - brt;
+        return (int) age/10000;
     }
 }
 
