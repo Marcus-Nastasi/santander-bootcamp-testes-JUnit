@@ -9,7 +9,7 @@ public class People {
     private String name;
     private LocalDate birth;
 
-    public People(String name, String birth) throws ParseException {
+    public People(String name, String birth) {
         this.name = name;
         this.birth = LocalDate.of(
             Integer.parseInt(birth.split("/")[2]),
