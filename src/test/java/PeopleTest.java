@@ -6,22 +6,20 @@ public class PeopleTest {
 
     @Test
     void returnAgeOnInteger() {
-        try {
-            People people = new People("Jessica", "19/05/2000");
-            Assertions.assertEquals(24, people.getAge());
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        People people = new People("Jessica", "19/05/2000");
+        Assertions.assertEquals(24, people.getAge());
     }
 
     @Test
     void returnIfIsMajor() {
-        try {
-            People people = new People("Jessica", "19/05/2000");
-            Assertions.assertTrue(people.isMajor());
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        People people = new People("Jessica", "19/05/2000");
+        Assertions.assertTrue(people.isMajor());
+    }
+
+    @Test
+    void equalsStringsOfBirth() {
+        People people = new People("Jessica", "19/05/2000");
+        Assertions.assertEquals("19/05/2000", people.getBirth());
     }
 }
 
