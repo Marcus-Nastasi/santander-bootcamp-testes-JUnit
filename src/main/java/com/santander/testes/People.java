@@ -1,6 +1,5 @@
 package com.santander.testes;
 
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -24,6 +23,13 @@ public class People {
 
     public String getName() {
         return name;
+    }
+
+    public String getBirth() {
+        String d = this.birth.toString().split("-")[2];
+        String m = this.birth.toString().split("-")[1];
+        String y = this.birth.toString().split("-")[0];
+        return d + '/' + m + '/' + y;
     }
 
     public int getAge() {
