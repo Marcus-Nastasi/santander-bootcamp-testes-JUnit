@@ -19,7 +19,7 @@ public class People {
 
     @Override
     public String toString() {
-        return("People{" + "name='" + name + '\'' + ", birth=" + birth + ", age=" + this.getAge() + '}');
+        return("People{" + "name='" + name + '\'' + ", birth=" + this.getBirth() + ", age=" + this.getAge() + '}');
     }
 
     public boolean isMajor() {

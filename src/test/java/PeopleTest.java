@@ -32,7 +32,7 @@ public class PeopleTest {
     @Test
     void toStringTest() {
         People people = new People("Mark", "26/10/2001");
-        assertEquals("People{name='Mark', birth=2001-10-26, age=22}", people.toString());
+        assertEquals("People{name='Mark', birth=26/10/2001, age=22}", people.toString());
     }
 }
 
