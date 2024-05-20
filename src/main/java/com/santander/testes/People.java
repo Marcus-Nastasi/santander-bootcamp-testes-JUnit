@@ -1,5 +1,7 @@
 package com.santander.testes;
 
+import com.santander.testes.Exceptions.PeopleException;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -8,7 +10,8 @@ public class People {
     private final String name;
     private final LocalDate birth;
 
-    public People(String name, String birth) {
+    public People(String name, String birth) throws PeopleException {
+        if (birth.length() < 10) throw new PeopleException("Birth must be complete date (dd/mm/yyyy)");
         this.name = name;
         this.birth = LocalDate.of(
             Integer.parseInt(birth.split("/")[2]),
