@@ -1,13 +1,16 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 public class ConditionTest {
 
     @Test
+    @EnabledIfEnvironmentVariable(named = "USER", matches = "rolemberg")
+    @EnabledOnOs(OS.LINUX)
     void validateJustInUserMark() {
-        assumeTrue("rolemberg".equals(System.getenv("USER")));
         assertEquals(10, 5+5);
     }
 }
