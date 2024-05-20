@@ -5,8 +5,8 @@ import java.time.temporal.ChronoUnit;
 
 public class People {
 
-    private String name;
-    private LocalDate birth;
+    private final String name;
+    private final LocalDate birth;
 
     public People(String name, String birth) {
         this.name = name;
