@@ -28,6 +28,12 @@ public class PeopleTest {
         People people = new People("Jessica", "19/05/2000");
         assertEquals("19/05/2000", people.getBirth());
     }
+
+    @Test
+    void toStringTest() {
+        People people = new People("Mark", "26/10/2001");
+        assertEquals("People{name='Mark', birth=2001-10-26, age=22}", people.toString());
+    }
 }
 
 
