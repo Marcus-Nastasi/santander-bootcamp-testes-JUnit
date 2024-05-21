@@ -1,4 +1,4 @@
-package com.santander.testes;
+package com.santander.testes.Domain;
 
 import com.santander.testes.Exceptions.PeopleException;
 

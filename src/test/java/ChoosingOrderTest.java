@@ -1,4 +1,4 @@
-import com.santander.testes.People;
+import com.santander.testes.Domain.People;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

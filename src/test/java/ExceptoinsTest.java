@@ -1,5 +1,5 @@
 import com.santander.testes.Exceptions.PeopleException;
-import com.santander.testes.People;
+import com.santander.testes.Domain.People;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

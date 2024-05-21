@@ -1,5 +1,7 @@
 package com.santander.testes;
 
+import com.santander.testes.Domain.People;
+
 public class Main {
     public static void main(String[] args) {
         try {
