@@ -14,6 +14,7 @@ public class TransferBetweenAccounts {
 
     public void transfer(double amount) throws AccountException {
         if (amount <= 0) throw new AccountException("Value must be more than 0");
+        if (this.acFrom.getBalance() < amount) throw new AccountException("Value higher than balance.");
         this.acFrom.setBalance(this.acFrom.getBalance() - amount);
         this.acTo.setBalance(this.acFrom.getBalance() + amount);
     }
