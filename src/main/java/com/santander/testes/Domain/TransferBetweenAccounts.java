@@ -4,20 +4,18 @@ import com.santander.testes.Exceptions.AccountException;
 
 public class TransferBetweenAccounts {
 
-    private final double value;
     private final Account acFrom;
     private final Account acTo;
 
-    public TransferBetweenAccounts(double value, Account acFrom, Account acTo) {
-        this.value = value;
+    public TransferBetweenAccounts(Account acFrom, Account acTo) {
         this.acFrom = acFrom;
         this.acTo = acTo;
     }
 
-    public void transfer(double ammount) throws AccountException {
-        if (ammount <= 0) throw new AccountException("Value must be more than 0");
-        this.acFrom.setBalance(this.acFrom.getBalance() - ammount);
-        this.acTo.setBalance(this.acFrom.getBalance() + ammount);
+    public void transfer(double amount) throws AccountException {
+        if (amount <= 0) throw new AccountException("Value must be more than 0");
+        this.acFrom.setBalance(this.acFrom.getBalance() - amount);
+        this.acTo.setBalance(this.acFrom.getBalance() + amount);
     }
 
     public double getValue() {
