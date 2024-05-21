@@ -8,9 +8,7 @@ public class ExceptoinsTest {
 
     @Test
     void throwingPeopleErrors() {
-        assertThrows(PeopleException.class, () -> {
-           new People("Jhon", "01/01/200");
-        });
+        assertThrows(PeopleException.class, () -> new People("Jhon", "01/01/200"));
     }
 }
 
