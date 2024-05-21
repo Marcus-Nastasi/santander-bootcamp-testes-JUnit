@@ -18,10 +18,6 @@ public class TransferBetweenAccounts {
         this.acTo.setBalance(this.acFrom.getBalance() + amount);
     }
 
-    public double getValue() {
-        return value;
-    }
-
     public Account getAcFrom() {
         return acFrom;
     }
