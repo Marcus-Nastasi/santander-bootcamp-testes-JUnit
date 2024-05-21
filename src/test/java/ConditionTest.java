@@ -13,7 +13,7 @@ public class ConditionTest {
     @EnabledOnOs({OS.LINUX, OS.MAC})
     @DisabledOnOs(OS.WINDOWS)
     void validateJustInUserMark() {
-        assertEquals(10, 5+5);
+        assertEquals(10, 5 + 5);
     }
 }
 
