@@ -28,6 +28,15 @@ public class TransferBetweenAccountsTest {
         TransferBetweenAccounts t = new TransferBetweenAccounts(ac1, ac2);
         assertThrows(AccountException.class, () -> t.transfer(0));
     }
+
+    @Order(3)
+    @Test
+    void transferAccountDoesNotHaveSufficientAmount() {
+        Account ac1 = new Account(1111, 1001, 100.00);
+        Account ac2 = new Account(1222, 1001, 200.00);
+        TransferBetweenAccounts t = new TransferBetweenAccounts(ac1, ac2);
+        assertThrows(AccountException.class, () -> t.transfer(200));
+    }
 }
 
 
