@@ -14,6 +14,10 @@ public class TransferBetweenAccounts {
         this.acTo = acTo;
     }
 
+    public void transfer() {
+
+    }
+
     public double getValue() {
         return value;
     }
