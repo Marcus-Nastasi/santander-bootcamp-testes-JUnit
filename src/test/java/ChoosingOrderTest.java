@@ -1,4 +1,3 @@
-import com.santander.testes.Exceptions.PeopleException;
 import com.santander.testes.People;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
