@@ -1,6 +1,6 @@
-package com.santander.testes;
+package com.santander.testes.Domain;
 
-import com.santander.testes.Domain.Account;
+import com.santander.testes.Exceptions.AccountException;
 
 public class TransferBetweenAccounts {
 
@@ -14,8 +14,10 @@ public class TransferBetweenAccounts {
         this.acTo = acTo;
     }
 
-    public void transfer() {
-
+    public void transfer(double ammount) throws AccountException {
+        if (ammount <= 0) throw new AccountException("Value must be more than 0");
+        this.acFrom.setBalance(this.acFrom.getBalance() - ammount);
+        this.acTo.setBalance(this.acFrom.getBalance() + ammount);
     }
 
     public double getValue() {
