@@ -12,6 +12,10 @@ public class Account {
         this.balance = balance;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public int getAgency() {
         return agency;
     }
@@ -24,3 +28,5 @@ public class Account {
         this.balance = balance;
     }
 }
+
+
